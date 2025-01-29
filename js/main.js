@@ -188,7 +188,7 @@ $(window).on('mousemove touchmove', function(e) {
 
 { let logo=document.createElement('logo');
 logo.src = "https://i.ibb.co/9wnF3XZ/IMG-20231102-142931.jpg";
-document.body.appendChild(img);
+document.body.appendChild(logo);
 img.style.borderRadius = "5px";
 img.style.border = "2px solid black";
 }
