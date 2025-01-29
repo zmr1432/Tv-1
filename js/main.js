@@ -64,14 +64,14 @@ document.querySelector('.player.box').addEventListener("wheel", function (e) {
     return false;
 }, true);
 
-$.getJSON('https://dl.dropboxusercontent.com/scl/fi/nqee8g54kbo86t89wwrmw/telugu.txt?rlkey=92t16rn90570rwocie4l7oaud&st=t8mjnkaz&dl=1', (data) => {
+$.getJSON('https://api.randomixs.com/tv', (data) => {
     canais = data.sort((a, b) => a.type.localeCompare(b.type))
     canais.forEach((element, i) => $('.canais.box').append(`<div class="canais opc" data-url="${element.url}" data-id="${i}"><div class="loader"><img src="${element.img}"></div></div>`));
     $('img').on('load', function () {
         $(this).animate({opacity: 1}, 300);
     });
     $('.canais.opc:eq(0)').addClass('selected');
-    $('#loading').fadeOut(200, function () {
+    $('#loading').fadeOut(350, function () {
         play($('.canais.opc:eq(0)').attr('data-url'));
         $(window).trigger('mousemove');
         $(this).remove();
