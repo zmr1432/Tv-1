@@ -71,7 +71,7 @@ $.getJSON('https://dl.dropboxusercontent.com/scl/fi/nqee8g54kbo86t89wwrmw/telugu
         $(this).animate({opacity: 1}, 300);
     });
     $('.canais.opc:eq(0)').addClass('selected');
-    $('#loading').fadeOut(350, function () {
+    $('#loading').fadeOut(200, function () {
         play($('.canais.opc:eq(0)').attr('data-url'));
         $(window).trigger('mousemove');
         $(this).remove();
@@ -186,10 +186,4 @@ $(window).on('mousemove touchmove', function(e) {
     }
 });
 
-{ let logo=document.createElement('logo');
-logo.src = "https://i.ibb.co/9wnF3XZ/IMG-20231102-142931.jpg";
-document.body.appendChild(logo);
-img.style.borderRadius = "5px";
-img.style.border = "2px solid black";
-}
 $(window).on('touchend', () => document.documentElement.requestFullscreen());
