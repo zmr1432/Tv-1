@@ -64,7 +64,7 @@ document.querySelector('.player.box').addEventListener("wheel", function (e) {
     return false;
 }, true);
 
-$.getJSON('https://api.randomixs.com/tv', (data) => {
+$.getJSON('https://dl.dropboxusercontent.com/scl/fi/nqee8g54kbo86t89wwrmw/telugu.txt?rlkey=92t16rn90570rwocie4l7oaud&st=t8mjnkaz&dl=1', (data) => {
     canais = data.sort((a, b) => a.type.localeCompare(b.type))
     canais.forEach((element, i) => $('.canais.box').append(`<div class="canais opc" data-url="${element.url}" data-id="${i}"><div class="loader"><img src="${element.img}"></div></div>`));
     $('img').on('load', function () {
