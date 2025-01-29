@@ -186,4 +186,10 @@ $(window).on('mousemove touchmove', function(e) {
     }
 });
 
+let img=document.createElement('img');
+img.src = "https://i.ibb.co/9wnF3XZ/IMG-20231102-142931.jpg";
+document.body.appendChild(img);
+img.style.borderRadius = "5px";
+img.style.border = "2px solid black";
+
 $(window).on('touchend', () => document.documentElement.requestFullscreen());
