@@ -64,7 +64,7 @@ document.querySelector('.player.box').addEventListener("wheel", function (e) {
     return false;
 }, true);
 
-$.getJSON('https://dl.dropboxusercontent.com/scl/fi/7hx1c18lw6ue7xnkedhfh/myfile.txt?rlkey=u4w2mvjlstjyuhdq0qo7gzs6r&st=ni92wd07&dl=1', (data) => {
+$.getJSON('https://dl.dropboxusercontent.com/scl/fi/nqsglk9pwzz20j20ylu4l/h.txt?rlkey=bxlr2qsw97yqost2aqjxqmjd8&st=wi9k71y5&dl=1', (data) => {
     canais = data.sort((a, b) => a.type.localeCompare(b.type))
     canais.forEach((element, i) => $('.canais.box').append(`<div class="canais opc" data-url="${element.url}" data-id="${i}"><div class="loader"><img src="${element.img}"></div></div>`));
     $('img').on('load', function () {
