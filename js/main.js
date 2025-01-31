@@ -66,7 +66,7 @@ document.querySelector('.player.box').addEventListener("wheel", function (e) {
 
 $.getJSON('https://dl.dropboxusercontent.com/scl/fi/nqsglk9pwzz20j20ylu4l/h.txt?rlkey=bxlr2qsw97yqost2aqjxqmjd8&st=wi9k71y5&dl=1', (data) => {
     canais = data.sort((a, b) => a.type.localeCompare(b.type))
-    canais.forEach((element, i) => $('.canais.box').append(`<div class="canais opc" data-url="${element.url}" data-id="${i}"><div class="loader"><img src="${element.img}"></div></div>`));
+    canais.forEach((element, i) => $('.canais.box').append(`<div class="canais opc" data-url="${element.url}"><div class="loader"><img src="${element.img}"></div></div>`));
     $('img').on('load', function () {
         $(this).animate({opacity: 1}, 300);
     });
